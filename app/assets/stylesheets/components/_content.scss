@@ -1,0 +1,14 @@
+.content {
+  margin: 12.5%;
+  width: 75%;
+  // background-color:$hasard ;
+  text-align: center;
+}
+
+a {
+  color: $dark-orange;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}

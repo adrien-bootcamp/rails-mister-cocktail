@@ -1,14 +1,16 @@
-<div class="page">
-  <h1 style="color: white;">J&A Cocktails</h1>
-  <div class="header">
-    <%= link_to "Create a new cocktail 🍸", new_cocktail_path, class:"btn btn-gradient"%>
-  </div>
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-      <div class="card-category">
-        <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
-      </div>
-    <% end %>
+<div class="under-body">
+  <div class="page">
+    <h1>J&A Cocktails</h1>
+    <div class="mt-3 mb-3">
+      <%= link_to "🍸 Create a new cocktail 🍸", new_cocktail_path, class:"btn-action"%>
+    </div>
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card-category">
+          <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
