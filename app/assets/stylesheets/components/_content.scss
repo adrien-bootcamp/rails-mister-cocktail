@@ -2,6 +2,15 @@
   margin-top: 20px;
   // background-color:$hasard;
   text-align: center;
+  margin-left: 44px;
+  margin-bottom: 44px;
+  font-family: $title-font;
+}
+
+.content-cocktail {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
 }
 
 a {
@@ -12,22 +21,30 @@ a {
   }
 }
 
-.content-cocktail {
-  margin-top: 20px;
-  display: flex;
-  justify-content: left;
+.img-coktail, .content-cocktail-ingredients {
+  width: 50%;
 }
 
 .content-cocktail-ingredients {
-  margin-left: 25px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-direction: column;
 }
 
-// .img-cocktail {
-//   width: 10%;
-//   height: 10%;
-// }
+.ingredient {
+  font-size: 30px;
+}
 
-// .img-cocktail img {
-//   width: 10%;
-//   height: 10%;
-// }
+.links {
+  font-size: 20px;
+}
+
+
+.img-cocktail img {
+  height: calc(100vh - 122px);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);;
+}
