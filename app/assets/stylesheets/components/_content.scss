@@ -1,9 +1,7 @@
 .content {
-  margin: 12.5%;
-  width: 75%;
-  // background-color:$hasard ;
+  margin-top: 20px;
+  // background-color:$hasard;
   text-align: center;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) url('<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>');
 }
 
 a {
@@ -13,3 +11,23 @@ a {
     color: black;
   }
 }
+
+.content-cocktail {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.content-cocktail-ingredients {
+  margin-left: 25px;
+}
+
+// .img-cocktail {
+//   width: 10%;
+//   height: 10%;
+// }
+
+// .img-cocktail img {
+//   width: 10%;
+//   height: 10%;
+// }

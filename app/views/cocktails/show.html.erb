@@ -1,17 +1,20 @@
 <div class="content">
+  <h1><%= @cocktail.name.capitalize%></h1>
   <div class="content-cocktail">
-    <h1><%= @cocktail.name.capitalize %></h1>
+    <% if !@cocktail.photo.key.nil? %>
+      <div class="img-coktail"><%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %></div>
+    <% end %>
     <div class="content-cocktail-ingredients">
       <%@cocktail.doses.each do |dose| %>
         <div class="ingredient">
-          <%= dose.description%> => <%= dose.ingredient.name%>   (<%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Sure ?" }%>)
+          <div><%= dose.description%> => <%= dose.ingredient.name%>   (<%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Sure ?" }%>)</div>
         </div>
       <% end %>
     </div>
-  </div>
-  <div class="links">
-    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-    <br>
-    <%= link_to "Back 🔙", cocktails_path %>
+    <div class="links">
+      <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+      <br>
+      <%= link_to "Back 🔙", cocktails_path %>
+    </div>
   </div>
 </div>
